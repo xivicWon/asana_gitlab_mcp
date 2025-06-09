@@ -1,0 +1,12 @@
+{
+  "name": "Asana Issue to Gitlab MR Handler",
+  "steps": [
+    { "type": "ai", "input": "{input}", "output": "asana_issue_id" },
+    {
+      "type": "api_call",
+      "url": "http://localhost:8000/mcp/trigger",
+      "method": "POST",
+      "body": { "issue_id": "{issue_id}" }
+    }
+  ]
+}

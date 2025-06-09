@@ -1,6 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+import uvicorn
 from asana_gitlab_mcp import trigger_mcp
+
 app = FastAPI()
 
 class MCPRequest(BaseModel):
@@ -13,3 +15,8 @@ def run_mcp(req: MCPRequest):
         return {"status": "success"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+    
+    
+if __name__ == "__main__":
+    uvicorn.run("mcp_server:app", host="localhost", port=8000, reload=True)

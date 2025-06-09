@@ -81,20 +81,20 @@ def trigger_mcp(asana_id: str):
     print(f"[✔] 브랜치 이름: {branch_name}")
     print(f"[✔] 설명: {description}")
     
-    # print("[+] GitLab 이슈 생성 중...")
-    # gitlab_issue = create_gitlab_issue(title, description)
+    print("[+] GitLab 이슈 생성 중...")
+    gitlab_issue = create_gitlab_issue(title, description)
 
-    # print("[+] 브랜치 생성 중...")
-    # create_gitlab_branch(branch_name)
+    print("[+] 브랜치 생성 중...")
+    create_gitlab_branch(branch_name)
 
-    # print("[+] Merge Request 생성 중...")
-    # mr = create_gitlab_merge_request(
-    #     source_branch=branch_name,
-    #     target_branch="main",
-    #     title=title,
-    #     description=f"연동된 Asana ID: {asana_id}\n\n{description}"
-    # )
-    # print("[✔] 완료: MR URL:", mr.get("web_url"))
+    print("[+] Merge Request 생성 중...")
+    mr = create_gitlab_merge_request(
+        source_branch=branch_name,
+        target_branch="main",
+        title=title,
+        description=f"연동된 Asana ID: {asana_id}\n\n{description}"
+    )
+    print("[✔] 완료: MR URL:", mr.get("web_url"))
 
 
 # 실행 예시

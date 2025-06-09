@@ -19,6 +19,11 @@ python -m venv venv
 
 ```sh
 uvicorn mcp_server:app --reload
+# or for mac
+python3 mcp_server.py
+
+# or for window
+python mcp_server.py
 ```
 
 # API 테스트 방법
@@ -33,3 +38,7 @@ curl -X POST "http://127.0.0.1:8000/mcp/trigger" -H "Content-Type: application/j
 ```sh
 deactivate
 ```
+
+# 성공한 멘트
+
+- 아사나 이슈 1210494780822946 에 대해 gitlab 브랜치를 생성해줘

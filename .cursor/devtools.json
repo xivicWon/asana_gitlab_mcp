@@ -1,0 +1,18 @@
+// 로컬 개발 환경에서 MCP를 트리거하기 위한 설정 파일입니다.
+// {
+//   "commands": [
+//     {
+//       "name": "Trigger MCP",
+//       "prompt": "MCP를 트리거해서 브랜치 생성과 MR을 요청합니다.",
+//       "url": "http://localhost:8000/trigger-mcp",
+//       "method": "POST",
+//       "body": {
+//         "issue_id": "${issue_id}",
+//         "command": "register_issue_and_create_branch"
+//       },
+//       "headers": {
+//         "Content-Type": "application/json"
+//       }
+//     }
+//   ]
+// }
